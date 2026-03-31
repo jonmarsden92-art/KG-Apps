@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2563eb">
-    <title>Professional Solutions | Door Survey & Commissioning</title>
+    <title>Professional Solutions | Door Survey, Commissioning & Delivery Notes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -63,6 +63,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -138,6 +139,11 @@
         .card-header.commissioning {
             background: linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(59,130,246,0.1) 100%);
             border-bottom: 3px solid #2563eb;
+        }
+
+        .card-header.delivery {
+            background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(168,85,247,0.1) 100%);
+            border-bottom: 3px solid #a855f7;
         }
 
         .card-icon {
@@ -226,6 +232,10 @@
             flex-wrap: wrap;
         }
 
+        .button-group.single {
+            justify-content: center;
+        }
+
         /* Stats Section */
         .stats {
             display: grid;
@@ -268,6 +278,16 @@
             margin-bottom: 10px;
         }
 
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             header h1 {
@@ -299,23 +319,23 @@
 </head>
 <body>
     <header>
-        <h1>🚪 Professional Door Management Solutions</h1>
-        <p>Complete survey and commissioning tools for modern construction and facility management</p>
+        <h1>🚪 Professional Business Solutions</h1>
+        <p>Complete tools for door surveys, commissioning, and delivery documentation</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#doorsurvey">Door Survey Pro</a></li>
-            <li><a href="#commissioning">CommSign Pro</a></li>
-            <li><a href="#comparison">Compare</a></li>
+            <li><a href="#doorsurvey">Door Survey</a></li>
+            <li><a href="#commissioning">Commissioning</a></li>
+            <li><a href="#delivery">Delivery Notes</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <section class="hero" id="overview">
-            <h2>Streamline Your Door Operations</h2>
-            <p>Whether you're surveying existing installations or commissioning new doors, our integrated platform provides the tools you need for accurate, efficient, and compliant work.</p>
+            <h2>Streamline Your Business Operations</h2>
+            <p>A complete suite of professional tools designed to handle door surveys, commissioning requirements, and delivery documentation with accuracy and efficiency.</p>
         </section>
 
         <div class="apps-grid">
@@ -368,17 +388,41 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Delivery Note Maker Card -->
+            <div class="card">
+                <div class="card-header delivery">
+                    <div class="card-icon">📄</div>
+                    <h3 class="card-title">Delivery Note Maker</h3>
+                    <p class="card-subtitle">Professional Delivery Documentation</p>
+                </div>
+                <div class="card-body">
+                    <ul class="features">
+                        <li>Quick delivery note generation</li>
+                        <li>Client & site information</li>
+                        <li>Item listing and tracking</li>
+                        <li>Signature capture</li>
+                        <li>Professional formatting</li>
+                        <li>Print-ready documents</li>
+                        <li>Delivery confirmation</li>
+                        <li>Document storage & export</li>
+                    </ul>
+                    <div class="button-group single">
+                        <a href="https://jonmarsden92-art.github.io/Delivery-Note-Maker/" class="btn-primary">Launch App</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Stats Section -->
         <section class="stats">
             <div class="stat">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Browser Compatible</div>
+                <div class="stat-number">3</div>
+                <div class="stat-label">Integrated Tools</div>
             </div>
             <div class="stat">
-                <div class="stat-number">0</div>
-                <div class="stat-label">Server Required</div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Browser Compatible</div>
             </div>
             <div class="stat">
                 <div class="stat-number">∞</div>
@@ -389,68 +433,16 @@
                 <div class="stat-label">Click Export</div>
             </div>
         </section>
-
-        <!-- Comparison Section -->
-        <section id="comparison">
-            <h2 style="text-align: center; margin-bottom: 40px; font-size: 1.8rem;">Quick Comparison</h2>
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr style="background: #f1f5f9;">
-                            <th style="padding: 15px; text-align: left; font-weight: 700; border-bottom: 2px solid #2563eb;">Feature</th>
-                            <th style="padding: 15px; text-align: center; font-weight: 700; border-bottom: 2px solid #2563eb;">Door Survey Pro</th>
-                            <th style="padding: 15px; text-align: center; font-weight: 700; border-bottom: 2px solid #2563eb;">CommSign Pro</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 15px; border-bottom: 1px solid #e2e8f0;">Door Measurements</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">–</td>
-                        </tr>
-                        <tr style="background: #fafafa;">
-                            <td style="padding: 15px; border-bottom: 1px solid #e2e8f0;">Compliance Checks</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">–</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border-bottom: 1px solid #e2e8f0;">Material Specs</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">–</td>
-                        </tr>
-                        <tr style="background: #fafafa;">
-                            <td style="padding: 15px; border-bottom: 1px solid #e2e8f0;">Photo Capture</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border-bottom: 1px solid #e2e8f0;">Signature Capture</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                        </tr>
-                        <tr style="background: #fafafa;">
-                            <td style="padding: 15px; border-bottom: 1px solid #e2e8f0;">Excel Export</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #e2e8f0;">✓</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px;">Offline Mode</td>
-                            <td style="padding: 15px; text-align: center;">✓</td>
-                            <td style="padding: 15px; text-align: center;">✓</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
     </div>
 
     <footer>
-        <p>Professional Door Management Solutions</p>
+        <p>Professional Business Solutions Suite</p>
         <p>&copy; 2026 jonmarsden92-art. All rights reserved.</p>
-        <p style="margin-top: 20px; opacity: 0.6;">
-            <a href="https://github.com/jonmarsden92-art" style="color: inherit; text-decoration: none;">GitHub</a> • 
-            <a href="https://github.com/jonmarsden92-art/Doorsurvey" style="color: inherit; text-decoration: none;">Door Survey Repository</a> • 
-            <a href="https://github.com/jonmarsden92-art/Door-Commissioning-" style="color: inherit; text-decoration: none;">Commissioning Repository</a>
+        <p style="margin-top: 20px; opacity: 0.8;">
+            <a href="https://github.com/jonmarsden92-art">GitHub Profile</a> • 
+            <a href="https://github.com/jonmarsden92-art/Doorsurvey">Door Survey</a> • 
+            <a href="https://github.com/jonmarsden92-art/Door-Commissioning-">Commissioning</a> • 
+            <a href="https://github.com/jonmarsden92-art/Delivery-Note-Maker">Delivery Notes</a>
         </p>
     </footer>
 </body>
