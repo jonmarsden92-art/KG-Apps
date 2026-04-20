@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2563eb">
-    <title>Professional Solutions | Door Survey, Commissioning & Delivery Notes</title>
+    <meta name="theme-color" content="#001A3D">
+    <title>Partner Portal | Kingsway Group Global</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --kingsway-navy: #001A3D;
+            --kingsway-yellow: #FFD100;
+            --kingsway-grey: #F2F2F2;
+            --text-dark: #1a1a1a;
+            --text-muted: #575757;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,40 +24,61 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            color: #1e293b;
+            background-color: var(--kingsway-grey);
+            color: var(--text-dark);
             line-height: 1.6;
             min-height: 100vh;
         }
 
-        /* Header */
+        /* Brand Header */
         header {
-            background: linear-gradient(135deg, #0a0a0f 0%, #2563eb 100%);
+            background: var(--kingsway-navy);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle Geometric Background Pattern */
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(120deg, rgba(255,209,0,0.05) 25%, transparent 25%);
+            background-size: 100px 100px;
+            pointer-events: none;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 800;
-            letter-spacing: -1px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        header h1 span {
+            color: var(--kingsway-yellow);
         }
 
         header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
+            font-size: 1.2rem;
+            max-width: 700px;
             margin: 0 auto;
+            font-weight: 400;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
         }
 
-        /* Navigation */
+        /* Professional Navigation */
         nav {
             background: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--kingsway-yellow);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -59,130 +88,98 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 18px 20px;
             flex-wrap: wrap;
         }
 
         nav a {
             text-decoration: none;
-            color: #1e293b;
-            font-weight: 600;
-            transition: color 0.3s;
+            color: var(--kingsway-navy);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: all 0.2s;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: #b38f00;
         }
 
-        /* Main Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 60px 20px;
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .hero h2 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
-            margin-bottom: 20px;
-            color: #0f172a;
+            color: var(--kingsway-navy);
+            margin-bottom: 15px;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            color: #64748b;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Grid Layout */
+        /* Grid System */
         .apps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-bottom: 80px;
+            gap: 30px;
         }
 
-        /* Card Styles */
+        /* Kingsway Themed Cards */
         .card {
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e2e8f0;
+            border-radius: 0; /* Squared edges for a more industrial/corporate feel */
+            border-left: 5px solid var(--kingsway-navy);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             display: flex;
             flex-direction: column;
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .card-header {
             padding: 40px 30px;
-            text-align: center;
-        }
-
-        .card-header.doorsurvey {
-            background: linear-gradient(135deg, rgba(15,23,42,0.1) 0%, rgba(78,205,196,0.1) 100%);
-            border-bottom: 3px solid #ff6b35;
-        }
-
-        .card-header.commissioning {
-            background: linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(59,130,246,0.1) 100%);
-            border-bottom: 3px solid #2563eb;
-        }
-
-        .card-header.delivery {
-            background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(168,85,247,0.1) 100%);
-            border-bottom: 3px solid #a855f7;
-        }
-        
-        .card-header.outerframe {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(45, 212, 191, 0.1) 100%);
-            border-bottom: 3px solid #14b8a6;
-        }
-
-        .card-header.erp {
-            background: linear-gradient(135deg, rgba(244, 63, 94, 0.1) 0%, rgba(251, 113, 133, 0.1) 100%);
-            border-bottom: 3px solid #f43f5e;
+            background: #fff;
+            border-bottom: 1px solid #eee;
         }
 
         .card-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
+            display: block;
         }
 
         .card-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #0f172a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: var(--kingsway-navy);
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .card-subtitle {
-            color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
         .card-body {
             padding: 30px;
-            background: #fafafa;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         .features {
@@ -191,296 +188,219 @@
         }
 
         .features li {
-            padding: 12px 0;
-            border-bottom: 1px solid #e2e8f0;
-            color: #475569;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: var(--text-dark);
             font-size: 0.95rem;
+            display: flex;
+            align-items: center;
         }
 
-        .features li:last-child {
-            border-bottom: none;
-        }
-
-        .features li:before {
-            content: "✓ ";
-            font-weight: 700;
-            color: #00d68f;
-            margin-right: 8px;
-        }
-
-        /* CTA Buttons */
-        .btn-primary {
+        .features li::before {
+            content: "";
             display: inline-block;
-            padding: 14px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            width: 8px;
+            height: 8px;
+            background-color: var(--kingsway-yellow);
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        /* Kingsway Button Style */
+        .btn-primary {
+            display: block;
+            background: var(--kingsway-navy);
             color: white;
             text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+            margin-top: auto;
         }
 
         .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: auto;
+            background: var(--kingsway-yellow);
+            color: var(--kingsway-navy);
         }
 
         /* Stats Section */
         .stats {
+            background: var(--kingsway-navy);
+            color: white;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .stat {
+            padding: 50px;
+            margin-top: 60px;
             text-align: center;
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            color: #2563eb;
-            margin-bottom: 10px;
+            color: var(--kingsway-yellow);
+            display: block;
         }
 
         .stat-label {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 80px;
-        }
-
-        footer p {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
             opacity: 0.8;
-            margin-bottom: 10px;
         }
 
-        footer a {
-            color: #93c5fd;
-            text-decoration: none;
-            transition: color 0.3s;
+        footer {
+            background: #000d1f;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
         }
 
-        footer a:hover {
-            color: #fff;
+        footer img {
+            max-width: 150px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-
-            .apps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .button-group a {
-                width: 100%;
-                text-align: center;
-            }
+            header h1 { font-size: 2rem; }
+            nav ul { gap: 15px; }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>🚪 Professional Business Solutions</h1>
-        <p>Complete tools for door surveys, commissioning, and delivery documentation</p>
+        <h1>Kingsway Group <span>Global</span></h1>
+        <p>Technical Project Portals & Digital Operational Suite</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#doorsurvey">Door Survey</a></li>
+            <li><a href="#doorsurvey">Surveys</a></li>
             <li><a href="#commissioning">Commissioning</a></li>
-            <li><a href="#delivery">Delivery Notes</a></li>
-            <li><a href="#outerframe">Outer Frame</a></li>
-            <li><a href="#erp">ERP System</a></li>
+            <li><a href="#delivery">Logistics</a></li>
+            <li><a href="#outerframe">Frame Tech</a></li>
+            <li><a href="#erp">Operations</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <section class="hero" id="overview">
-            <h2>Streamline Your Business Operations</h2>
-            <p>A complete suite of professional tools designed to handle door surveys, commissioning requirements, and delivery documentation with accuracy and efficiency.</p>
+        <section class="hero">
+            <h2>Defining Excellence in Door Safety</h2>
+            <p>Access our specialized toolsets for surveying, technical verification, and enterprise resource planning.</p>
         </section>
 
         <div class="apps-grid">
             <div class="card" id="doorsurvey">
-                <div class="card-header doorsurvey">
-                    <div class="card-icon">📋</div>
-                    <h3 class="card-title">Door Survey Pro</h3>
-                    <p class="card-subtitle">Comprehensive Door Measurement & Documentation</p>
+                <div class="card-header">
+                    <span class="card-icon">📐</span>
+                    <h3 class="card-title">Survey Pro</h3>
+                    <p class="card-subtitle">Technical Site Specification</p>
                 </div>
                 <div class="card-body">
                     <ul class="features">
-                        <li>Detailed door measurements (Width, Height, Frame Depth)</li>
-                        <li>Material & finish specifications</li>
-                        <li>Handing and hardware documentation</li>
-                        <li>Image capture & attachment</li>
-                        <li>Excel export with custom fields</li>
-                        <li>Project & site management</li>
-                        <li>Intrusive survey support</li>
-                        <li>Customer signature capture</li>
+                        <li>High-precision measurements</li>
+                        <li>Hardware & Handing Spec</li>
+                        <li>Intrusive Survey Analysis</li>
+                        <li>Client Approval Signature</li>
                     </ul>
-                    <div class="button-group">
-                        <a href="https://jonmarsden92-art.github.io/Doorsurvey/" class="btn-primary">Launch App</a>
-                    </div>
+                    <a href="https://jonmarsden92-art.github.io/Doorsurvey/" class="btn-primary">Open Portal</a>
                 </div>
             </div>
 
             <div class="card" id="commissioning">
-                <div class="card-header commissioning">
-                    <div class="card-icon">✅</div>
-                    <h3 class="card-title">CommSign Pro</h3>
-                    <p class="card-subtitle">Door Commissioning & Compliance Verification</p>
+                <div class="card-header">
+                    <span class="card-icon">🛡️</span>
+                    <h3 class="card-title">CommSign</h3>
+                    <p class="card-subtitle">Compliance & Verification</p>
                 </div>
                 <div class="card-body">
                     <ul class="features">
                         <li>Functional compliance checks</li>
-                        <li>Gap measurement verification</li>
-                        <li>Lock and hardware testing</li>
-                        <li>Door closer validation</li>
-                        <li>Photo documentation</li>
-                        <li>PM notes & actions tracking</li>
-                        <li>Client witness sign-off</li>
-                        <li>One-click Excel reports</li>
+                        <li>Gap & closer validation</li>
+                        <li>Photo-documented evidence</li>
+                        <li>Automated technical reports</li>
                     </ul>
-                    <div class="button-group">
-                        <a href="https://jonmarsden92-art.github.io/Door-Commissioning-/" class="btn-primary">Launch App</a>
-                    </div>
+                    <a href="https://jonmarsden92-art.github.io/Door-Commissioning-/" class="btn-primary">Open Portal</a>
                 </div>
             </div>
 
             <div class="card" id="delivery">
-                <div class="card-header delivery">
-                    <div class="card-icon">📄</div>
-                    <h3 class="card-title">Delivery Note Maker</h3>
-                    <p class="card-subtitle">Professional Delivery Documentation</p>
+                <div class="card-header">
+                    <span class="card-icon">📦</span>
+                    <h3 class="card-title">Delivery Suite</h3>
+                    <p class="card-subtitle">Logistics Documentation</p>
                 </div>
                 <div class="card-body">
                     <ul class="features">
-                        <li>Quick delivery note generation</li>
-                        <li>Client & site information</li>
-                        <li>Item listing and tracking</li>
-                        <li>Signature capture</li>
-                        <li>Professional formatting</li>
-                        <li>Print-ready documents</li>
-                        <li>Delivery confirmation</li>
-                        <li>Document storage & export</li>
+                        <li>Real-time manifest generation</li>
+                        <li>Digital POD signatures</li>
+                        <li>Itemized tracking system</li>
+                        <li>Print-ready documentation</li>
                     </ul>
-                    <div class="button-group">
-                        <a href="https://jonmarsden92-art.github.io/Delivery-Note-Maker/" class="btn-primary">Launch App</a>
-                    </div>
+                    <a href="https://jonmarsden92-art.github.io/Delivery-Note-Maker/" class="btn-primary">Open Portal</a>
                 </div>
             </div>
 
             <div class="card" id="outerframe">
-                <div class="card-header outerframe">
-                    <div class="card-icon">🖼️</div>
-                    <h3 class="card-title">Outer Frame App</h3>
-                    <p class="card-subtitle">Precision Frame Analysis & Specification</p>
+                <div class="card-header">
+                    <span class="card-icon">🏗️</span>
+                    <h3 class="card-title">FrameTech</h3>
+                    <p class="card-subtitle">Structural Opening Analysis</p>
                 </div>
                 <div class="card-body">
                     <ul class="features">
-                        <li>Detailed frame profile mapping</li>
-                        <li>Structural opening measurements</li>
-                        <li>Tolerance and clearance calculations</li>
-                        <li>Material compatibility checks</li>
-                        <li>Installation requirement logging</li>
+                        <li>Profile mapping & tolerances</li>
+                        <li>Structural opening verification</li>
                         <li>Fixing point specifications</li>
-                        <li>Technical data export</li>
-                        <li>On-site photo verification</li>
+                        <li>Installation data export</li>
                     </ul>
-                    <div class="button-group">
-                        <a href="https://jonmarsden92-art.github.io/Outer-Frame-App/" class="btn-primary">Launch App</a>
-                    </div>
+                    <a href="https://jonmarsden92-art.github.io/Outer-Frame-App/" class="btn-primary">Open Portal</a>
                 </div>
             </div>
 
             <div class="card" id="erp">
-                <div class="card-header erp">
-                    <div class="card-icon">⚙️</div>
-                    <h3 class="card-title">ERP System</h3>
-                    <p class="card-subtitle">Enterprise Resource & Operations Planning</p>
+                <div class="card-header">
+                    <span class="card-icon">📈</span>
+                    <h3 class="card-title">ERP Global</h3>
+                    <p class="card-subtitle">Enterprise Resource Planning</p>
                 </div>
                 <div class="card-body">
                     <ul class="features">
-                        <li>Centralized project management</li>
-                        <li>Resource allocation & tracking</li>
-                        <li>Inventory and stock control</li>
-                        <li>Workflow automation tools</li>
-                        <li>Financial overview & reporting</li>
-                        <li>Team collaboration dashboard</li>
-                        <li>Procurement management</li>
-                        <li>Real-time status updates</li>
+                        <li>Global project management</li>
+                        <li>Resource & Stock Control</li>
+                        <li>Real-time status tracking</li>
+                        <li>Procurement & Workflow</li>
                     </ul>
-                    <div class="button-group">
-                        <a href="https://jonmarsden92-art.github.io/ERP/" class="btn-primary">Launch App</a>
-                    </div>
+                    <a href="https://jonmarsden92-art.github.io/ERP/" class="btn-primary">Open Portal</a>
                 </div>
             </div>
         </div>
-
-        <section class="stats">
-            <div class="stat">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Integrated Tools</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Browser Compatible</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Offline Access</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">1</div>
-                <div class="stat-label">Click Export</div>
-            </div>
-        </section>
     </div>
 
+    <section class="stats">
+        <div class="stat">
+            <span class="stat-number">05</span>
+            <span class="stat-label">Core Modules</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Cloud Access</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Digital Compliance</span>
+        </div>
+    </section>
+
     <footer>
-        <p>Professional Business Solutions Suite</p>
-        <p>&copy; 2026 jonmarsden92-art. All rights reserved.</p>
+        <p><strong>Kingsway Group Global</strong></p>
+        <p>The Partners in Healthcare & Challenging Environment Safety.</p>
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Kingsway Group Global. All technical documentation is proprietary.</p>
     </footer>
+
 </body>
 </html>
