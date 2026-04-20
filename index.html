@@ -119,6 +119,8 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -145,6 +147,16 @@
             background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(168,85,247,0.1) 100%);
             border-bottom: 3px solid #a855f7;
         }
+        
+        .card-header.outerframe {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(45, 212, 191, 0.1) 100%);
+            border-bottom: 3px solid #14b8a6;
+        }
+
+        .card-header.erp {
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.1) 0%, rgba(251, 113, 133, 0.1) 100%);
+            border-bottom: 3px solid #f43f5e;
+        }
 
         .card-icon {
             font-size: 3rem;
@@ -167,6 +179,10 @@
         .card-body {
             padding: 30px;
             background: #fafafa;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .features {
@@ -205,6 +221,7 @@
             font-size: 1rem;
             background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
             color: white;
+            text-align: center;
         }
 
         .btn-primary:hover {
@@ -217,6 +234,7 @@
             gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: auto;
         }
 
         /* Stats Section */
@@ -312,6 +330,8 @@
             <li><a href="#doorsurvey">Door Survey</a></li>
             <li><a href="#commissioning">Commissioning</a></li>
             <li><a href="#delivery">Delivery Notes</a></li>
+            <li><a href="#outerframe">Outer Frame</a></li>
+            <li><a href="#erp">ERP System</a></li>
         </ul>
     </nav>
 
@@ -322,8 +342,7 @@
         </section>
 
         <div class="apps-grid">
-            <!-- Door Survey Pro Card -->
-            <div class="card">
+            <div class="card" id="doorsurvey">
                 <div class="card-header doorsurvey">
                     <div class="card-icon">📋</div>
                     <h3 class="card-title">Door Survey Pro</h3>
@@ -346,8 +365,7 @@
                 </div>
             </div>
 
-            <!-- CommSign Pro Card -->
-            <div class="card">
+            <div class="card" id="commissioning">
                 <div class="card-header commissioning">
                     <div class="card-icon">✅</div>
                     <h3 class="card-title">CommSign Pro</h3>
@@ -370,8 +388,7 @@
                 </div>
             </div>
 
-            <!-- Delivery Note Maker Card -->
-            <div class="card">
+            <div class="card" id="delivery">
                 <div class="card-header delivery">
                     <div class="card-icon">📄</div>
                     <h3 class="card-title">Delivery Note Maker</h3>
@@ -393,12 +410,57 @@
                     </div>
                 </div>
             </div>
+
+            <div class="card" id="outerframe">
+                <div class="card-header outerframe">
+                    <div class="card-icon">🖼️</div>
+                    <h3 class="card-title">Outer Frame App</h3>
+                    <p class="card-subtitle">Precision Frame Analysis & Specification</p>
+                </div>
+                <div class="card-body">
+                    <ul class="features">
+                        <li>Detailed frame profile mapping</li>
+                        <li>Structural opening measurements</li>
+                        <li>Tolerance and clearance calculations</li>
+                        <li>Material compatibility checks</li>
+                        <li>Installation requirement logging</li>
+                        <li>Fixing point specifications</li>
+                        <li>Technical data export</li>
+                        <li>On-site photo verification</li>
+                    </ul>
+                    <div class="button-group">
+                        <a href="https://jonmarsden92-art.github.io/Outer-Frame-App/" class="btn-primary">Launch App</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="erp">
+                <div class="card-header erp">
+                    <div class="card-icon">⚙️</div>
+                    <h3 class="card-title">ERP System</h3>
+                    <p class="card-subtitle">Enterprise Resource & Operations Planning</p>
+                </div>
+                <div class="card-body">
+                    <ul class="features">
+                        <li>Centralized project management</li>
+                        <li>Resource allocation & tracking</li>
+                        <li>Inventory and stock control</li>
+                        <li>Workflow automation tools</li>
+                        <li>Financial overview & reporting</li>
+                        <li>Team collaboration dashboard</li>
+                        <li>Procurement management</li>
+                        <li>Real-time status updates</li>
+                    </ul>
+                    <div class="button-group">
+                        <a href="https://jonmarsden92-art.github.io/ERP/" class="btn-primary">Launch App</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Stats Section -->
         <section class="stats">
             <div class="stat">
-                <div class="stat-number">3</div>
+                <div class="stat-number">5</div>
                 <div class="stat-label">Integrated Tools</div>
             </div>
             <div class="stat">
